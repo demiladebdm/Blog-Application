@@ -3,7 +3,7 @@ const cookieParser = require("cookie-parser");
 const app = express();
 const dontenv = require("dotenv");
 const mongoose = require("mongoose");
-const multer = require("multer");
+// const multer = require("multer");
 const cors = require("cors");
 const path = require("path");
 const swaggerJsdoc = require("swagger-jsdoc");
@@ -23,14 +23,14 @@ mongoose
 })
 .catch((err) => console.log(err));
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads");
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + "-" + file.originalname);
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, "uploads");
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, Date.now() + "-" + file.originalname);
+//   },
+// });
 
 // mongoose.connect(
   //   "mongodb+srv://demiladebdm:YDc0LmbapHaxHAX4@cluster0.8atwsuq.mongodb.net/?retryWrites=true&w=majority"
@@ -44,14 +44,14 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(express.json());
 app.use(cookieParser());
-app.use("/images", express.static(path.join(__dirname, "/images")));
+// app.use("/images", express.static(path.join(__dirname, "/images")));
 
 
 // const upload = multer({ dest: "uploads/" });
-const upload = multer({ storage: storage });
-app.post("/api/upload", upload.single("file"), (req, res) => {
-  res.status(200).json("File has been uploaded");
-});
+// const upload = multer({ storage: storage });
+// app.post("/api/upload", upload.single("file"), (req, res) => {
+//   res.status(200).json("File has been uploaded");
+// });
 
 
 const authRoute = require("./routes/auth");

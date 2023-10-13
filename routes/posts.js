@@ -9,10 +9,10 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const cloudinary = require("cloudinary").v2;
 const router = express.Router();
-const multer = require("multer");
-const uploadMiddleware = multer({ dest: "uploads/" });
+// const multer = require("multer");
+// const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs");
-router.use("/uploads", express.static(__dirname + "/uploads"));
+// router.use("/uploads", express.static(__dirname + "/uploads"));
 
 const User = require("../models/User");
 const Post = require("../models/Post");
@@ -243,7 +243,7 @@ cloudinary.config({
 //   //   res.status(500).json({ err: "Internal Server Error" });
 //   // }
 // });
-router.post("/", uploadMiddleware.single("file"), async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { title, desc, categories, photo } = req.body;
 
