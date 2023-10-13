@@ -8,7 +8,7 @@ const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   // const url = "http://localhost:5000/api";
-  const url = "https://blog-application-1m8uugf94-demiladebdm.vercel.app/api";
+  const url = "https://blog-application-newapi.vercel.app/api";
 
   useEffect(() => {
     const popupTimer = setTimeout(() => {
@@ -21,7 +21,6 @@ const Home = () => {
   const handleClosePopup = () => {
     setShowPopup(false);
   };
-
 
   return (
     <section className={`home ${showPopup ? "popup-visible" : ""}`}>
@@ -51,7 +50,6 @@ const Home = () => {
       <section className="home__right">
         <img src={bgImg} alt="Profile" />
       </section>
-
     </section>
   );
 };

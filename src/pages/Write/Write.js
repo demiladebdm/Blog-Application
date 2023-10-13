@@ -13,7 +13,7 @@ const Write = () => {
   //   const { user } = useContext(Context);
 
   // const url = "http://localhost:5000/api";
-  const url = "https://blog-application-1m8uugf94-demiladebdm.vercel.app/api";
+  const url = "https://blog-application-newapi.vercel.app/api";
 
   const cloudinaryName = process.env.REACT_APP_CLOUDINARY_NAME;
 
@@ -101,7 +101,6 @@ const Write = () => {
       console.error("Error creating post:", error);
     }
   };
-
 
   return (
     <section className="write">

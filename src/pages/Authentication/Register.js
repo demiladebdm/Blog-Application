@@ -6,7 +6,7 @@ import "./Authentication.css";
 function Register() {
   const navigate = useNavigate();
   // const baseUrl = "http://localhost:5000/api";
-  const baseUrl = "https://blog-application-1m8uugf94-demiladebdm.vercel.app/api";
+  const baseUrl = "https://blog-application-newapi.vercel.app/api";
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -35,7 +35,6 @@ function Register() {
         console.log(errorMessage);
         throw new Error(errorMessage);
       }
-
 
       const responseData = await response.json();
       console.log("Registration Successful", responseData);

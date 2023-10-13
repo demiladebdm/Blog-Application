@@ -6,7 +6,7 @@ import "./Authentication.css";
 function Login() {
   const navigate = useNavigate();
   // const baseUrl = "http://localhost:5000/api";
-  const baseUrl = "https://blog-application-1m8uugf94-demiladebdm.vercel.app/api";
+  const baseUrl = "https://blog-application-newapi.vercel.app/api";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

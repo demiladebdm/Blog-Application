@@ -7,7 +7,7 @@ import "./Blog.css";
 
 const Blog = () => {
   // const url = "http://localhost:5000/api";
-  const url = "https://blog-application-1m8uugf94-demiladebdm.vercel.app/api";
+  const url = "https://blog-application-newapi.vercel.app/api";
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
 
@@ -30,7 +30,6 @@ const Blog = () => {
 
     fetchPosts();
   }, [search]);
-
 
   return (
     <section className="blogs">

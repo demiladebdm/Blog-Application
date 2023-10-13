@@ -13,7 +13,7 @@ const Newsletter = ({ showPopup, handleClosePopup }) => {
   const [errorMessage, setErrorMessage] = useState("");
 
   // const url = "http://localhost:5000/api";
-  const url = "https://blog-application-1m8uugf94-demiladebdm.vercel.app/api";
+  const url = "https://blog-application-newapi.vercel.app/api";
 
   //   const handleClosePopup = () => {
   //     setShowPopup(false);
