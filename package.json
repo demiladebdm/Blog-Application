@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "blog-api",
   "version": "1.0.0",
   "description": "A blog application",
   "main": "index.js",
@@ -27,7 +27,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js && npm run open-docs",
-    "open-docs": "start http://localhost:5000/api-docs"
+    "open-docs": "start http://localhost:5000/api-docs",
+    "vercel-build": "echo hello"
   },
   "author": "",
   "license": "ISC"
